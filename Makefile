@@ -1,7 +1,12 @@
 .PHONY: clean stats test
 
-CC ?= gcc
-CFLAGS += -Wall -pedantic -O2 -g
+# remove the ? from ?= gcc  ... still not working as stddup is c++???
+
+CC = gcc 
+CFLAGS = -std=c99 -Wall
+# CFLAGS += -Wall -pedantic -O2 -g
+
+#minimum: micro-lisp
 
 all: clean mlisp89 stats test
 

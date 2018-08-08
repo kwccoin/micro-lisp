@@ -1,8 +1,11 @@
 /* Micro Scheme (C) A. Carl Douglas */
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h> // addeded dng
+
 #define debug(m,e) fprintf(default_output_port->value.stream, "%s:%d: %s:",__FILE__,__LINE__,m); print_obj(default_output_port, e); fprintf(default_output_port->value.stream, "\n");
 typedef struct Object {
   enum { _Symbol, _Pair, _Primitive, _Closure, _Macro, _Syntax, _Char, _String, _Integer, _Port } tag;
