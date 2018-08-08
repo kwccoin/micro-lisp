@@ -6,9 +6,17 @@ CC = gcc
 CFLAGS = -std=c99 -Wall
 # CFLAGS += -Wall -pedantic -O2 -g
 
-# minimum: micro-lisp
+#strdup: strdup-test # seems ok
+
+minimum: micro-lisp
 
 all: clean mlisp89 stats test
+
+####
+
+strdup-test: strdup-test.c
+	$(CC) $(CFLAGS) -o $@ $^
+
 
 micro-lisp: micro-lisp.c
 	$(CC) $(CFLAGS) -o $@ $^
