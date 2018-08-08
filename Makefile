@@ -6,7 +6,7 @@ CC = gcc
 CFLAGS = -std=c99 -Wall
 # CFLAGS += -Wall -pedantic -O2 -g
 
-#minimum: micro-lisp
+# minimum: micro-lisp
 
 all: clean mlisp89 stats test
 
